@@ -16,7 +16,10 @@ protected:
     std::unordered_set<int> tabelaPaginas;
     std::list<int> ordemElementosTabela;
     int tamanhoTabela;
+    int numFaltasPagina;
 public:
+    virtual void executarAlgoritmo() = 0;
+
     const std::vector<int> &getEntradas() const;
 
     void setEntradas(const std::vector<int> &entradas);
@@ -32,6 +35,10 @@ public:
     int getTamanhoTabela() const;
 
     void setTamanhoTabela(int tamanhoTabela);
+
+    int getNumFaltasPagina() const;
+
+    void setNumFaltasPagina(int numFaltasPagina);
 };
 
 

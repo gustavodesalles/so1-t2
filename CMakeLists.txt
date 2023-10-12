@@ -8,4 +8,6 @@ add_executable(so1_t2 main.cpp
         Leitor.h
         Algoritmo.cpp
         Algoritmo.h
+        AlgoritmoFIFO.cpp
+        AlgoritmoFIFO.h
 )

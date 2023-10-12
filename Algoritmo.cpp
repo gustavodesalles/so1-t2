@@ -35,3 +35,11 @@ int Algoritmo::getTamanhoTabela() const {
 void Algoritmo::setTamanhoTabela(int tamanhoTabela) {
     Algoritmo::tamanhoTabela = tamanhoTabela;
 }
+
+int Algoritmo::getNumFaltasPagina() const {
+    return numFaltasPagina;
+}
+
+void Algoritmo::setNumFaltasPagina(int numFaltasPagina) {
+    Algoritmo::numFaltasPagina = numFaltasPagina;
+}
