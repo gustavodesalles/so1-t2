@@ -10,4 +10,6 @@ add_executable(so1_t2 main.cpp
         Algoritmo.h
         AlgoritmoFIFO.cpp
         AlgoritmoFIFO.h
+        AlgoritmoLRU.cpp
+        AlgoritmoLRU.h
 )

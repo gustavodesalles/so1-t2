@@ -73,6 +73,12 @@ build CMakeFiles/so1_t2.dir/AlgoritmoFIFO.cpp.o: CXX_COMPILER__so1_t2_unscanned_
   OBJECT_DIR = CMakeFiles/so1_t2.dir
   OBJECT_FILE_DIR = CMakeFiles/so1_t2.dir
 
+build CMakeFiles/so1_t2.dir/AlgoritmoLRU.cpp.o: CXX_COMPILER__so1_t2_unscanned_Debug /home/ist/Documentos/c++/so1-t2/AlgoritmoLRU.cpp || cmake_object_order_depends_target_so1_t2
+  DEP_FILE = CMakeFiles/so1_t2.dir/AlgoritmoLRU.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/so1_t2.dir
+  OBJECT_FILE_DIR = CMakeFiles/so1_t2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target so1_t2
@@ -81,7 +87,7 @@ build CMakeFiles/so1_t2.dir/AlgoritmoFIFO.cpp.o: CXX_COMPILER__so1_t2_unscanned_
 #############################################
 # Link the executable so1_t2
 
-build so1_t2: CXX_EXECUTABLE_LINKER__so1_t2_Debug CMakeFiles/so1_t2.dir/main.cpp.o CMakeFiles/so1_t2.dir/Leitor.cpp.o CMakeFiles/so1_t2.dir/Algoritmo.cpp.o CMakeFiles/so1_t2.dir/AlgoritmoFIFO.cpp.o
+build so1_t2: CXX_EXECUTABLE_LINKER__so1_t2_Debug CMakeFiles/so1_t2.dir/main.cpp.o CMakeFiles/so1_t2.dir/Leitor.cpp.o CMakeFiles/so1_t2.dir/Algoritmo.cpp.o CMakeFiles/so1_t2.dir/AlgoritmoFIFO.cpp.o CMakeFiles/so1_t2.dir/AlgoritmoLRU.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/so1_t2.dir
   POST_BUILD = :

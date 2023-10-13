@@ -1,16 +1,16 @@
 //
-// Created by ist on 12/10/23.
+// Created by ist on 13/10/23.
 //
 
-#include "AlgoritmoFIFO.h"
+#include "AlgoritmoLRU.h"
 
-AlgoritmoFIFO::AlgoritmoFIFO(std::vector<int> entradas, int tamanhoTabela) {
+AlgoritmoLRU::AlgoritmoLRU(std::vector<int> entradas, int tamanhoTabela) {
     this->entradas = entradas;
     this->tamanhoTabela = tamanhoTabela;
     this->numFaltasPagina = 0;
 }
 
-void AlgoritmoFIFO::executarAlgoritmo() {
+void AlgoritmoLRU::executarAlgoritmo() {
     for (int i : entradas) {
         if (!tabelaPaginas.count(i)) { // se i não estiver na tabela, count == 0
             numFaltasPagina++;
@@ -20,6 +20,9 @@ void AlgoritmoFIFO::executarAlgoritmo() {
             }
             tabelaPaginas.insert(i);
             ordemElementosTabela.push_back(i);
+        } else {
+            ordemElementosTabela.remove(i);
+            ordemElementosTabela.push_back(i); // mover i ao fim da lista de ordem (ver se há método melhor)
         }
     }
 }
