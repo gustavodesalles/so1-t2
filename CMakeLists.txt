@@ -14,4 +14,5 @@ add_executable(so1_t2 main.cpp
         AlgoritmoLRU.h
         AlgoritmoOPT.cpp
         AlgoritmoOPT.h
+        teste.cpp
 )
