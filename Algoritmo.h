@@ -15,7 +15,7 @@ protected:
     std::vector<int> entradas;
     std::unordered_set<int> tabelaPaginas;
     std::list<int> ordemElementosTabela;
-    int tamanhoTabela;
+    unsigned int tamanhoTabela;
     int numFaltasPagina;
 public:
     virtual void executarAlgoritmo() = 0;

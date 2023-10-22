@@ -11,13 +11,15 @@ AlgoritmoOPT::AlgoritmoOPT(std::vector<int> entradas, int tamanhoTabela) {
 }
 
 void AlgoritmoOPT::executarAlgoritmo() {
-    for (int i = 0; i < entradas.size(); i++) {
+    for (std::size_t i = 0; i < entradas.size(); i++) {
         if (!tabelaPaginas.count(entradas[i])) {
             numFaltasPagina++;
             if (tabelaPaginas.size() == tamanhoTabela) {
-                int paginaARemover = preverPaginaMudar(i);
-                tabelaPaginas.erase(paginaARemover);
-                ordemElementosTabela.remove(paginaARemover);
+                int paginaARemover = preverPaginaMudar((int) i);
+                if (paginaARemover != -1) {
+                    tabelaPaginas.erase(paginaARemover);
+                    ordemElementosTabela.remove(paginaARemover);
+                }
             }
             tabelaPaginas.insert(entradas[i]);
             ordemElementosTabela.push_back(entradas[i]);
@@ -26,9 +28,9 @@ void AlgoritmoOPT::executarAlgoritmo() {
 }
 
 int AlgoritmoOPT::preverPaginaMudar(int i) {
-    int paginaMenosRecente, indiceMenosRecente = i;
+    std::size_t paginaMenosRecente = -1, indiceMenosRecente = i;
     for (int k : ordemElementosTabela) {
-        int j;
+        std::size_t j;
         for (j = i; j < entradas.size(); ++j) {
             if (entradas[j] == k) {
                 if (j > indiceMenosRecente) {
@@ -40,5 +42,5 @@ int AlgoritmoOPT::preverPaginaMudar(int i) {
         }
         if (j == entradas.size()) return k;
     }
-    return paginaMenosRecente;
+    return (int) paginaMenosRecente;
 }
